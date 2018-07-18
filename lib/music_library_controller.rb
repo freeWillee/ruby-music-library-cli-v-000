@@ -92,7 +92,7 @@ class MusicLibraryController
 
     song_array = self.list_songs
 
-    binding.pry
+    # binding.pry
 
     if user_input.to_i > song_array.size
       return nil
