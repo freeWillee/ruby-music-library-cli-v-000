@@ -93,7 +93,7 @@ class MusicLibraryController
     puts "Which song number would you like to play?"
     user_input = gets.strip
 
-    song_array = self.list_songs_printout
+    song_array = self.list_songs
 
     binding.pry
 
