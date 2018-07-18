@@ -36,9 +36,6 @@ class MusicLibraryController
       puts "#{i}. #{song.artist.name} - #{song.name} - #{song.genre.name}"
       i += 1
     end
-    # array_of_songs
-    # self.list_songs_printout = array_of_songs
-    # binding.pry
   end
 
   def list_artists
@@ -96,8 +93,6 @@ class MusicLibraryController
     user_input = gets.strip
 
     song_array = self.songlist_storage
-
-    # binding.pry
 
     if user_input.to_i > song_array.size || user_input.to_i < 1
       return nil
