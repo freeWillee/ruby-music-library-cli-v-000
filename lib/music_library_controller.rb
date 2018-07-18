@@ -36,6 +36,7 @@ class MusicLibraryController
       i += 1
     end
     @list_songs_printout = array_of_songs
+    binding.binding.pry
   end
 
   def list_artists
