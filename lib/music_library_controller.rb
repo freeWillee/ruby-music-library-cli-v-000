@@ -35,6 +35,7 @@ class MusicLibraryController
       puts "#{i}. #{song.artist.name} - #{song.name} - #{song.genre.name}"
       i += 1
     end
+    array_of_songs
     # self.list_songs_printout = array_of_songs
     # binding.pry
   end
