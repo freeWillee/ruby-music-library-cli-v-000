@@ -36,7 +36,7 @@ class MusicLibraryController
       i += 1
     end
     @list_songs_printout = array_of_songs
-    binding.binding.pry
+    binding.pry
   end
 
   def list_artists
@@ -93,7 +93,7 @@ class MusicLibraryController
     puts "Which song number would you like to play?"
     user_input = gets.strip
 
-    song_array = self.list_songs
+    song_array = @list_songs_printout
 
     # binding.pry
 
