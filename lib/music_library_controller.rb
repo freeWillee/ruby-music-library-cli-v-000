@@ -5,7 +5,7 @@ class MusicLibraryController
   def initialize(path = "./db/mp3s")
     object = MusicImporter.new(path)
     object.import
-    songlist_storage = Song.all.sort_by {|song| song.name}
+    @songlist_storage = Song.all.sort_by {|song| song.name}
   end
 
   def call
@@ -31,7 +31,7 @@ class MusicLibraryController
 
   def list_songs
     i = 1
-    array_of_songs = Song.all.sort_by {|song| song.name}
+    array_of_songs = self.songlist_storage
     array_of_songs.each do |song|
       puts "#{i}. #{song.artist.name} - #{song.name} - #{song.genre.name}"
       i += 1
