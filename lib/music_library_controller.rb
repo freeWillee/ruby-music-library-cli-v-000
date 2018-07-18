@@ -99,7 +99,7 @@ class MusicLibraryController
 
     # binding.pry
 
-    if user_input.to_i > song_array.size
+    if user_input.to_i > song_array.size || user_input.to_i < 1
       return nil
     else
       selected_artist = song_array[(user_input.to_i)-1].artist.name
