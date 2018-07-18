@@ -36,7 +36,7 @@ class MusicLibraryController
       i += 1
     end
     @list_songs_printout = array_of_songs
-    binding.pry
+    # binding.pry
   end
 
   def list_artists
@@ -95,7 +95,7 @@ class MusicLibraryController
 
     song_array = @list_songs_printout
 
-    # binding.pry
+    binding.pry
 
     if user_input.to_i > song_array.size
       return nil
