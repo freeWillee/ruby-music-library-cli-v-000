@@ -98,8 +98,7 @@ class MusicLibraryController
       return nil
     else
       i = 1
-      genre_song_array = genre.songs.sort_by {|song| song.name}
-      genre_song_array.each do |song|
+      song_array.each do |song|
         puts "#{i}. #{song.artist.name} - #{song.name}"
         i += 1
       end
