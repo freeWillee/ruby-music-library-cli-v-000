@@ -97,10 +97,8 @@ class MusicLibraryController
     if user_input.to_i > song_array.size
       return nil
     else
-      i = 1
       song_array.each do |song|
-        puts "#{i}. #{song.artist.name} - #{song.name}"
-        i += 1
+        puts "Playing #{song_array[(user_input.to_i)-1].name} by #{song_array[(user_input.to_i)-1].artist.name}"
       end
     end
   end
