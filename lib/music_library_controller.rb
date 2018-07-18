@@ -1,10 +1,11 @@
 class MusicLibraryController
 
-  attr_accessor :list_songs_printout
+  attr_accessor :songlist_storage
 
   def initialize(path = "./db/mp3s")
     object = MusicImporter.new(path)
     object.import
+    songlist_storage = Song.all.sort_by {|song| song.name}
   end
 
   def call
