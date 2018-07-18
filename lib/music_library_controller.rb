@@ -99,7 +99,7 @@ class MusicLibraryController
     else
       selected_artist = song_array[(user_input.to_i)-1].artist.name
       selected_song = song_array[(user_input.to_i)-1].name
-      puts "Playing #{song_array[(user_input.to_i)-1].name} by #{song_array[(user_input.to_i)-1].artist.name}"
+      puts "Playing #{selected_song} by #{selected_artist}"
       end
     end
   end
