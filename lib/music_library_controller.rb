@@ -91,10 +91,10 @@ class MusicLibraryController
     user_input = gets.strip
 
     song_array = self.list_songs
-    
+
     # binding.pry
 
-    if genre == nil
+    if user_input.to_i > song_array.size
       return nil
     else
       i = 1
