@@ -1,5 +1,7 @@
 class MusicLibraryController
 
+  attr_accessor :list_songs_printout
+
   def initialize(path = "./db/mp3s")
     object = MusicImporter.new(path)
     object.import
@@ -33,7 +35,7 @@ class MusicLibraryController
       puts "#{i}. #{song.artist.name} - #{song.name} - #{song.genre.name}"
       i += 1
     end
-    array_of_songs
+    @list_songs_printout = array_of_songs
   end
 
   def list_artists
